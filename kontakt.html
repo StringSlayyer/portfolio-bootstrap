@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="cs" data-bs-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="title.contact">Kontakt – Samuel Žárský</title>
+  <meta name="description" content="Kontaktní formulář a odkazy na Samuela Žárského.">
+  <meta name="theme-color" content="#121212">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("theme");
+        if (t === "light" || t === "dark") document.documentElement.setAttribute("data-bs-theme", t);
+        var l = localStorage.getItem("lang");
+        if (l === "cs" || l === "en") document.documentElement.lang = l;
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif&amp;family=Inter:wght@400;500;600&amp;display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link visually-hidden-focusable" href="#main" data-i18n="common.skip">Přeskočit na obsah</a>
+
+  <!-- Navbar + offcanvas menu -->
+  <header class="site-header sticky-top">
+    <nav class="navbar navbar-expand-lg" aria-label="Hlavní navigace" data-i18n-attr="aria-label:common.mainNav">
+      <div class="container">
+        <a class="navbar-brand logo" href="index.html">Samuel Žárský<span class="accent">.</span></a>
+        <div class="d-flex align-items-center gap-1 order-lg-last ms-auto ms-lg-3">
+          <div class="d-flex">
+          <div class="btn-group lang-switch" role="group" aria-label="Jazyk / Language">
+            <button type="button" class="btn btn-lang" data-lang="cs" aria-label="Čeština">CZ</button>
+            <button type="button" class="btn btn-lang" data-lang="en" aria-label="English">EN</button>
+          </div>
+          </div>
+          <button type="button" class="btn-icon theme-toggle" aria-label="Přepnout světlý / tmavý motiv" data-i18n-attr="aria-label:common.theme"><i class="bi bi-sun" aria-hidden="true"></i></button>
+          <button class="navbar-toggler btn-icon" type="button" data-bs-toggle="offcanvas" data-bs-target="#mainMenu" aria-controls="mainMenu" aria-label="Otevřít menu" data-i18n-attr="aria-label:common.openMenu"><i class="bi bi-list" aria-hidden="true"></i></button>
+        </div>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="mainMenu" aria-labelledby="mainMenuLabel">
+          <div class="offcanvas-header">
+            <p class="offcanvas-title logo mb-0" id="mainMenuLabel">Samuel Žárský<span class="accent">.</span></p>
+            <button type="button" class="btn-icon ms-auto" data-bs-dismiss="offcanvas" aria-label="Zavřít menu" data-i18n-attr="aria-label:common.closeMenu"><i class="bi bi-x-lg" aria-hidden="true"></i></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav ms-lg-auto gap-1">
+              <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house" aria-hidden="true"></i><span data-i18n="nav.home">Domů</span></a></li>
+              <li class="nav-item"><a class="nav-link" href="o-mne.html"><i class="bi bi-person" aria-hidden="true"></i><span data-i18n="nav.about">O mně</span></a></li>
+              <li class="nav-item"><a class="nav-link" href="projekty.html"><i class="bi bi-code-slash" aria-hidden="true"></i><span data-i18n="nav.projects">Projekty</span></a></li>
+              <li class="nav-item"><a class="nav-link" href="fotografie.html"><i class="bi bi-camera" aria-hidden="true"></i><span data-i18n="nav.photo">Fotografie</span></a></li>
+              <li class="nav-item"><a class="nav-link" href="hudba.html"><i class="bi bi-music-note-beamed" aria-hidden="true"></i><span data-i18n="nav.music">Hudba</span></a></li>
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="kontakt.html"><i class="bi bi-envelope" aria-hidden="true"></i><span data-i18n="nav.contact">Kontakt</span></a></li>
+            </ul>
+            <div class="d-lg-none mt-4 pt-4 border-top">
+              <div class="d-flex align-items-center justify-content-between gap-3 mb-3">
+                <span class="form-section-title mb-0" data-i18n="common.language">Jazyk</span>
+                <div class="btn-group lang-switch" role="group" aria-label="Jazyk / Language">
+            <button type="button" class="btn btn-lang" data-lang="cs" aria-label="Čeština">CZ</button>
+            <button type="button" class="btn btn-lang" data-lang="en" aria-label="English">EN</button>
+          </div>
+              </div>
+              <div class="d-flex align-items-center justify-content-between gap-3 mb-3">
+                <span class="form-section-title mb-0" data-i18n="common.themeLabel">Motiv</span>
+                <button type="button" class="btn-icon theme-toggle" aria-label="Přepnout světlý / tmavý motiv" data-i18n-attr="aria-label:common.theme"><i class="bi bi-sun" aria-hidden="true"></i></button>
+              </div>
+              <ul class="social-links list-unstyled mb-0">
+                <li><a class="btn-icon" href="https://github.com/StringSlayyer" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github" aria-hidden="true"></i></a></li>
+                <li><a class="btn-icon" href="https://www.youtube.com/@samuelzarsky666" target="_blank" rel="noopener" aria-label="YouTube"><i class="bi bi-youtube" aria-hidden="true"></i></a></li>
+                <li><a class="btn-icon" href="https://www.instagram.com/samuel_zarsky/" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a></li>
+                <li><a class="btn-icon" href="mailto:sam@viademy.com" aria-label="E-mail"><i class="bi bi-envelope" aria-hidden="true"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <div class="page-header">
+      <div class="container">
+        <nav aria-label="Drobečková navigace" data-i18n-attr="aria-label:common.breadcrumb">
+          <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="index.html"><i class="bi bi-house" aria-hidden="true"></i><span data-i18n="nav.home">Domů</span></a></li>
+            <li class="breadcrumb-item active" aria-current="page" data-i18n="nav.contact">Kontakt</li>
+          </ol>
+        </nav>
+        <h1 class="mb-2" data-i18n="contact.title">Kontakt</h1>
+        <p class="lead mb-0" data-i18n="contact.lead">Spolupráce na projektu, focení nebo hudba na akci? Napište mi.</p>
+      </div>
+    </div>
+
+    <section class="section-tight">
+      <div class="container">
+        <div class="row g-4 g-lg-5">
+          <div class="col-lg-8">
+            <!-- Formulář -->
+            <form id="contactForm" class="card-surface p-4 p-lg-5 needs-validation" novalidate aria-labelledby="formTitle">
+              <h2 id="formTitle" class="h3 mb-4" data-i18n="form.title">Poptávkový formulář</h2>
+
+              <fieldset class="row g-3 mb-4">
+                <legend class="form-section-title" data-i18n="form.secPerson">Kontaktní údaje</legend>
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Jan" autocomplete="given-name" required maxlength="50">
+                    <label for="firstName"><span data-i18n="form.firstName">Jméno</span> *</label>
+                    <div class="invalid-feedback" data-i18n="form.errFirstName">Vyplňte jméno.</div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Novák" autocomplete="family-name" required maxlength="50">
+                    <label for="lastName"><span data-i18n="form.lastName">Příjmení</span> *</label>
+                    <div class="invalid-feedback" data-i18n="form.errLastName">Vyplňte příjmení.</div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="input-group has-validation">
+                    <span class="input-group-text" aria-hidden="true">@</span>
+                    <div class="form-floating">
+                      <input type="email" class="form-control" id="email" name="email" placeholder="jan@example.com" autocomplete="email" required>
+                      <label for="email"><span data-i18n="form.email">E-mail</span> *</label>
+                      <div class="invalid-feedback" data-i18n="form.errEmail">Zadejte platný e-mail.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="input-group has-validation">
+                    <span class="input-group-text">+420</span>
+                    <div class="form-floating">
+                      <input type="tel" class="form-control" id="phone" name="phone" placeholder="123 456 789" autocomplete="tel-national" pattern="[0-9]{3} ?[0-9]{3} ?[0-9]{3}" aria-describedby="phoneHelp">
+                      <label for="phone" data-i18n="form.phone">Telefon</label>
+                      <div class="invalid-feedback" data-i18n="form.errPhone">Zadejte 9 číslic, např. 123 456 789.</div>
+                    </div>
+                  </div>
+                  <div id="phoneHelp" class="form-text" data-i18n="form.phoneHelp">Nepovinné. Formát 123 456 789.</div>
+                </div>
+              </fieldset>
+
+              <fieldset class="row g-3 mb-4">
+                <legend class="form-section-title" data-i18n="form.secRequest">Poptávka</legend>
+                <div class="col-12">
+                  <p class="mb-1" id="typeLabel"><span data-i18n="form.type">Typ poptávky</span> *</p>
+                  <div class="d-flex flex-wrap column-gap-4" role="radiogroup" aria-labelledby="typeLabel">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="type" id="typeProject" value="project" required>
+                      <label class="form-check-label" for="typeProject" data-i18n="form.typeProject">Spolupráce na projektu</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="type" id="typePhoto" value="photo">
+                      <label class="form-check-label" for="typePhoto" data-i18n="form.typePhoto">Focení</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="type" id="typeMusic" value="music">
+                      <label class="form-check-label" for="typeMusic" data-i18n="form.typeMusic">Hudba na akci</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="type" id="typeOther" value="other">
+                      <label class="form-check-label" for="typeOther" data-i18n="form.typeOther">Jiné</label>
+                    </div>
+                  </div>
+                  <div class="invalid-feedback" id="typeFeedback" data-i18n="form.errType">Vyberte typ poptávky.</div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <select class="form-select" id="topic" name="topic" required>
+                      <option value="" selected disabled data-i18n="form.topicChoose">Vyberte…</option>
+                      <option value="backend" data-i18n="form.topicBackend">Backend / API v .NET</option>
+                      <option value="web" data-i18n="form.topicWeb">Webová aplikace</option>
+                      <option value="vr" data-i18n="form.topicVr">VR aplikace v Unity</option>
+                      <option value="photo" data-i18n="form.topicPhoto">Fotografie</option>
+                      <option value="music" data-i18n="form.topicMusic">Hudební vystoupení</option>
+                      <option value="other" data-i18n="form.topicOther">Něco jiného</option>
+                    </select>
+                    <label for="topic"><span data-i18n="form.topic">Téma</span> *</label>
+                    <div class="invalid-feedback" data-i18n="form.errTopic">Vyberte téma.</div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="input-group">
+                    <div class="form-floating">
+                      <input type="number" class="form-control" id="budget" name="budget" placeholder="10000" min="0" step="500">
+                      <label for="budget" data-i18n="form.budget">Předpokládaný rozpočet</label>
+                      <div class="invalid-feedback" data-i18n="form.errBudget">Zadejte kladné číslo.</div>
+                    </div>
+                    <span class="input-group-text">Kč</span>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <input type="date" class="form-control" id="eventDate" name="eventDate" aria-describedby="dateHelp">
+                    <label for="eventDate" data-i18n="form.date">Datum akce</label>
+                    <div class="invalid-feedback" data-i18n="form.errDate">Datum nesmí být v minulosti.</div>
+                  </div>
+                  <div id="dateHelp" class="form-text" data-i18n="form.dateHelp">Nepovinné, jen u focení nebo hudby na akci.</div>
+                </div>
+                <div class="col-md-6">
+                  <div class="input-group has-validation">
+                    <span class="input-group-text">https://</span>
+                    <div class="form-floating">
+                      <input type="text" class="form-control" id="website" name="website" placeholder="github.com/uzivatel" pattern="[A-Za-z0-9.\-]+\.[A-Za-z]{2,}(/\S*)?" inputmode="url">
+                      <label for="website" data-i18n="form.website">Web / GitHub</label>
+                      <div class="invalid-feedback" data-i18n="form.errWebsite">Zadejte adresu bez https://, např. github.com/uzivatel.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <p class="mb-1" id="interestsLabel" data-i18n="form.interests">Co vás zajímá</p>
+                  <div class="d-flex flex-wrap column-gap-4" role="group" aria-labelledby="interestsLabel">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="interests" id="intDev" value="dev">
+                      <label class="form-check-label" for="intDev" data-i18n="form.intDev">Vývoj</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="interests" id="intVr" value="vr">
+                      <label class="form-check-label" for="intVr">VR</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="interests" id="intPhoto" value="photo">
+                      <label class="form-check-label" for="intPhoto" data-i18n="form.intPhoto">Fotografie</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="interests" id="intMusic" value="music">
+                      <label class="form-check-label" for="intMusic" data-i18n="form.intMusic">Hudba</label>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset class="row g-3">
+                <legend class="form-section-title" data-i18n="form.secMessage">Zpráva</legend>
+                <div class="col-12">
+                  <div class="form-floating">
+                    <textarea class="form-control" id="message" name="message" placeholder="Zpráva" required minlength="20" maxlength="1000" style="height: 180px" aria-describedby="charCounter"></textarea>
+                    <label for="message"><span data-i18n="form.message">Zpráva</span> *</label>
+                    <div class="invalid-feedback" data-i18n="form.errMessage">Napište zprávu alespoň o 20 znacích.</div>
+                  </div>
+                  <div class="d-flex justify-content-end mt-1">
+                    <span class="char-counter" id="charCounter" aria-live="polite">0 / 1000</span>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="consent" name="consent" required>
+                    <label class="form-check-label" for="consent"><span data-i18n="form.consent">Souhlasím se zpracováním osobních údajů za účelem odpovědi na poptávku.</span> *</label>
+                  </div>
+                  <div class="invalid-feedback" id="consentFeedback" data-i18n="form.errConsent">Bez souhlasu nelze formulář uložit.</div>
+                </div>
+                <div class="col-12 d-flex flex-wrap align-items-center gap-3 mt-4">
+                  <button type="submit" class="btn btn-primary btn-lg"><i class="bi bi-floppy" aria-hidden="true"></i><span data-i18n="form.submit">Uložit</span></button>
+                  <button type="reset" class="btn btn-outline-light-subtle btn-lg"><i class="bi bi-arrow-counterclockwise" aria-hidden="true"></i><span data-i18n="form.reset">Vymazat</span></button>
+                  <span class="small text-secondary" data-i18n="form.required">* povinné údaje</span>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+
+          <!-- Kontaktní odkazy -->
+          <aside class="col-lg-4" aria-labelledby="linksTitle">
+            <h2 id="linksTitle" class="h3 mb-3" data-i18n="contact.linksTitle">Nebo přímo</h2>
+            <div class="d-grid gap-3">
+              <a class="contact-link card-surface card-hover" href="mailto:sam@viademy.com">
+                <span class="card-icon"><i class="bi bi-envelope" aria-hidden="true"></i></span>
+                <span><small>E-mail</small><strong>sam@viademy.com</strong></span>
+              </a>
+              <a class="contact-link card-surface card-hover" href="https://github.com/StringSlayyer" target="_blank" rel="noopener">
+                <span class="card-icon"><i class="bi bi-github" aria-hidden="true"></i></span>
+                <span><small>GitHub</small><strong>StringSlayyer</strong></span>
+              </a>
+              <a class="contact-link card-surface card-hover" href="https://www.instagram.com/samuel_zarsky/" target="_blank" rel="noopener">
+                <span class="card-icon"><i class="bi bi-instagram" aria-hidden="true"></i></span>
+                <span><small>Instagram</small><strong>@samuel_zarsky</strong></span>
+              </a>
+              <a class="contact-link card-surface card-hover" href="https://www.youtube.com/@samuelzarsky666" target="_blank" rel="noopener">
+                <span class="card-icon"><i class="bi bi-youtube" aria-hidden="true"></i></span>
+                <span><small>YouTube</small><strong>@samuelzarsky666</strong></span>
+              </a>
+              <a class="contact-link card-surface card-hover" href="https://viademy.com" target="_blank" rel="noopener">
+                <span class="card-icon"><i class="bi bi-headset-vr" aria-hidden="true"></i></span>
+                <span><small>Viademy</small><strong>viademy.com</strong></span>
+              </a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal: shrnutí odeslaného formuláře -->
+  <div class="modal fade" id="summaryModal" tabindex="-1" aria-labelledby="summaryModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg modal-fullscreen-sm-down">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="d-flex align-items-center gap-3">
+            <span class="card-icon"><i class="bi bi-check2-circle" aria-hidden="true"></i></span>
+            <h2 class="modal-title h3 mb-0" id="summaryModalTitle" data-i18n="form.savedTitle">Uloženo, děkuji!</h2>
+          </div>
+          <button type="button" class="btn-icon ms-auto" data-bs-dismiss="modal" aria-label="Zavřít" data-i18n-attr="aria-label:common.close"><i class="bi bi-x-lg" aria-hidden="true"></i></button>
+        </div>
+        <div class="modal-body">
+          <p class="text-secondary" data-i18n="form.savedText">Formulář se nikam neodesílá, toto je shrnutí zadaných údajů:</p>
+          <dl class="summary-list" id="summaryList"></dl>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal"><i class="bi bi-check-lg" aria-hidden="true"></i><span data-i18n="common.ok">Rozumím</span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4 align-items-center text-center text-md-start">
+        <div class="col-md-6 col-lg-4">
+          <a class="logo" href="index.html">Samuel Žárský<span class="accent">.</span></a>
+          <p class="text-secondary small mb-0 mt-1">&copy; 2026 Samuel Žárský · <span data-i18n="footer.note">Vývojář, hudebník, fotograf</span></p>
+        </div>
+        <nav class="col-lg-4 d-none d-lg-block" aria-label="Mapa webu" data-i18n-attr="aria-label:footer.sitemap">
+          <ul class="footer-sitemap list-unstyled mb-0">
+            <li><a href="index.html" data-i18n="nav.home">Domů</a></li>
+            <li><a href="o-mne.html" data-i18n="nav.about">O mně</a></li>
+            <li><a href="projekty.html" data-i18n="nav.projects">Projekty</a></li>
+            <li><a href="fotografie.html" data-i18n="nav.photo">Fotografie</a></li>
+            <li><a href="hudba.html" data-i18n="nav.music">Hudba</a></li>
+            <li><a href="kontakt.html" data-i18n="nav.contact">Kontakt</a></li>
+          </ul>
+        </nav>
+        <div class="col-md-6 col-lg-4 d-flex justify-content-center justify-content-md-end">
+          <ul class="social-links list-unstyled mb-0">
+                <li><a class="btn-icon" href="https://github.com/StringSlayyer" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github" aria-hidden="true"></i></a></li>
+                <li><a class="btn-icon" href="https://www.youtube.com/@samuelzarsky666" target="_blank" rel="noopener" aria-label="YouTube"><i class="bi bi-youtube" aria-hidden="true"></i></a></li>
+                <li><a class="btn-icon" href="https://www.instagram.com/samuel_zarsky/" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a></li>
+                <li><a class="btn-icon" href="mailto:sam@viademy.com" aria-label="E-mail"><i class="bi bi-envelope" aria-hidden="true"></i></a></li>
+              </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

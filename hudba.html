@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="cs" data-bs-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="title.music">Hudba – Samuel Žárský</title>
+  <meta name="description" content="Klavír, harfa a kytara: covery, videa a repertoár.">
+  <meta name="theme-color" content="#121212">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("theme");
+        if (t === "light" || t === "dark") document.documentElement.setAttribute("data-bs-theme", t);
+        var l = localStorage.getItem("lang");
+        if (l === "cs" || l === "en") document.documentElement.lang = l;
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif&amp;family=Inter:wght@400;500;600&amp;display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.bootstrap5.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/responsive/3.0.3/css/responsive.bootstrap5.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link visually-hidden-focusable" href="#main" data-i18n="common.skip">Přeskočit na obsah</a>
+
+  <!-- Navbar + offcanvas menu -->
+  <header class="site-header sticky-top">
+    <nav class="navbar navbar-expand-lg" aria-label="Hlavní navigace" data-i18n-attr="aria-label:common.mainNav">
+      <div class="container">
+        <a class="navbar-brand logo" href="index.html">Samuel Žárský<span class="accent">.</span></a>
+        <div class="d-flex align-items-center gap-1 order-lg-last ms-auto ms-lg-3">
+          <div class="d-flex">
+          <div class="btn-group lang-switch" role="group" aria-label="Jazyk / Language">
+            <button type="button" class="btn btn-lang" data-lang="cs" aria-label="Čeština">CZ</button>
+            <button type="button" class="btn btn-lang" data-lang="en" aria-label="English">EN</button>
+          </div>
+          </div>
+          <button type="button" class="btn-icon theme-toggle" aria-label="Přepnout světlý / tmavý motiv" data-i18n-attr="aria-label:common.theme"><i class="bi bi-sun" aria-hidden="true"></i></button>
+          <button class="navbar-toggler btn-icon" type="button" data-bs-toggle="offcanvas" data-bs-target="#mainMenu" aria-controls="mainMenu" aria-label="Otevřít menu" data-i18n-attr="aria-label:common.openMenu"><i class="bi bi-list" aria-hidden="true"></i></button>
+        </div>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="mainMenu" aria-labelledby="mainMenuLabel">
+          <div class="offcanvas-header">
+            <p class="offcanvas-title logo mb-0" id="mainMenuLabel">Samuel Žárský<span class="accent">.</span></p>
+            <button type="button" class="btn-icon ms-auto" data-bs-dismiss="offcanvas" aria-label="Zavřít menu" data-i18n-attr="aria-label:common.closeMenu"><i class="bi bi-x-lg" aria-hidden="true"></i></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav ms-lg-auto gap-1">
+              <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house" aria-hidden="true"></i><span data-i18n="nav.home">Domů</span></a></li>
+              <li class="nav-item"><a class="nav-link" href="o-mne.html"><i class="bi bi-person" aria-hidden="true"></i><span data-i18n="nav.about">O mně</span></a></li>
+              <li class="nav-item"><a class="nav-link" href="projekty.html"><i class="bi bi-code-slash" aria-hidden="true"></i><span data-i18n="nav.projects">Projekty</span></a></li>
+              <li class="nav-item"><a class="nav-link" href="fotografie.html"><i class="bi bi-camera" aria-hidden="true"></i><span data-i18n="nav.photo">Fotografie</span></a></li>
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="hudba.html"><i class="bi bi-music-note-beamed" aria-hidden="true"></i><span data-i18n="nav.music">Hudba</span></a></li>
+              <li class="nav-item"><a class="nav-link" href="kontakt.html"><i class="bi bi-envelope" aria-hidden="true"></i><span data-i18n="nav.contact">Kontakt</span></a></li>
+            </ul>
+            <div class="d-lg-none mt-4 pt-4 border-top">
+              <div class="d-flex align-items-center justify-content-between gap-3 mb-3">
+                <span class="form-section-title mb-0" data-i18n="common.language">Jazyk</span>
+                <div class="btn-group lang-switch" role="group" aria-label="Jazyk / Language">
+            <button type="button" class="btn btn-lang" data-lang="cs" aria-label="Čeština">CZ</button>
+            <button type="button" class="btn btn-lang" data-lang="en" aria-label="English">EN</button>
+          </div>
+              </div>
+              <div class="d-flex align-items-center justify-content-between gap-3 mb-3">
+                <span class="form-section-title mb-0" data-i18n="common.themeLabel">Motiv</span>
+                <button type="button" class="btn-icon theme-toggle" aria-label="Přepnout světlý / tmavý motiv" data-i18n-attr="aria-label:common.theme"><i class="bi bi-sun" aria-hidden="true"></i></button>
+              </div>
+              <ul class="social-links list-unstyled mb-0">
+                <li><a class="btn-icon" href="https://github.com/StringSlayyer" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github" aria-hidden="true"></i></a></li>
+                <li><a class="btn-icon" href="https://www.youtube.com/@samuelzarsky666" target="_blank" rel="noopener" aria-label="YouTube"><i class="bi bi-youtube" aria-hidden="true"></i></a></li>
+                <li><a class="btn-icon" href="https://www.instagram.com/samuel_zarsky/" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a></li>
+                <li><a class="btn-icon" href="mailto:sam@viademy.com" aria-label="E-mail"><i class="bi bi-envelope" aria-hidden="true"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <div class="page-header">
+      <div class="container">
+        <nav aria-label="Drobečková navigace" data-i18n-attr="aria-label:common.breadcrumb">
+          <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="index.html"><i class="bi bi-house" aria-hidden="true"></i><span data-i18n="nav.home">Domů</span></a></li>
+            <li class="breadcrumb-item active" aria-current="page" data-i18n="nav.music">Hudba</li>
+          </ol>
+        </nav>
+        <h1 class="mb-2" data-i18n="music.title">Hudba</h1>
+        <p class="lead mb-0" data-i18n="music.lead">Tři nástroje, každý s jiným příběhem.</p>
+      </div>
+    </div>
+
+    <section class="section-tight" aria-label="Nástroje" data-i18n-attr="aria-label:music.instrumentsLabel">
+      <div class="container">
+        <!-- Taby: Klavír / Harfa / Kytara -->
+        <ul class="nav nav-pills tab-scroll mb-4" id="musicTabs" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="tab-piano" data-bs-toggle="pill" data-bs-target="#pane-piano" type="button" role="tab" aria-controls="pane-piano" aria-selected="true"><i class="bi bi-music-note" aria-hidden="true"></i><span data-i18n="music.piano">Klavír</span></button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="tab-harp" data-bs-toggle="pill" data-bs-target="#pane-harp" type="button" role="tab" aria-controls="pane-harp" aria-selected="false"><i class="bi bi-music-note-beamed" aria-hidden="true"></i><span data-i18n="music.harp">Harfa</span></button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="tab-guitar" data-bs-toggle="pill" data-bs-target="#pane-guitar" type="button" role="tab" aria-controls="pane-guitar" aria-selected="false"><i class="bi bi-music-note-list" aria-hidden="true"></i><span data-i18n="music.guitar">Kytara</span></button>
+          </li>
+        </ul>
+
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="pane-piano" role="tabpanel" aria-labelledby="tab-piano" tabindex="0">
+            <div class="row g-4 g-lg-5 align-items-center">
+              <div class="col-lg-6">
+                <h2 class="mb-3" data-i18n="music.pianoTitle">Klavír od první třídy</h2>
+                <p class="text-secondary" data-i18n="music.pianoText">Klavír je můj první nástroj. Hraju na něj od první třídy a dodnes je to nástroj, ke kterému se vracím nejčastěji.</p>
+                <p class="text-secondary"><span class="todo">[DOPLNIT: co rád hraješ, ZUŠ, styl…]</span></p>
+              </div>
+              <div class="col-lg-6">
+                <div class="embed-placeholder">
+                  <i class="bi bi-camera-video fs-2 d-block mb-2" aria-hidden="true"></i>
+                  <span class="todo">[DOPLNIT: video nebo Instagram post s klavírem]</span>
+                </div>
+                <!-- Sem lze vložit YouTube embed (<div class="ratio ratio-16x9 video-frame"><iframe …></iframe></div>) nebo Instagram embed, viz návod v tabu Kytara. -->
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane fade" id="pane-harp" role="tabpanel" aria-labelledby="tab-harp" tabindex="0">
+            <div class="row g-4 g-lg-5">
+              <div class="col-lg-4">
+                <h2 class="mb-3" data-i18n="music.harpTitle">Harfa</h2>
+                <p class="text-secondary" data-i18n="music.harpText">Na harfu jsem chodil od roku 2017 šest let, pak jsem pokračoval sám. Na YouTube jsou moje covery, novější a kratší videa mám na Instagramu.</p>
+                <div class="d-flex flex-wrap gap-2">
+                  <a class="btn btn-primary" href="https://www.youtube.com/@samuelzarsky666" target="_blank" rel="noopener"><i class="bi bi-youtube" aria-hidden="true"></i><span data-i18n="music.ytChannel">YouTube kanál</span></a>
+                  <a class="btn btn-outline-primary" href="https://www.instagram.com/samuel_zarsky/" target="_blank" rel="noopener"><i class="bi bi-instagram" aria-hidden="true"></i><span data-i18n="common.moreOnIg">Více na Instagramu</span></a>
+                </div>
+              </div>
+              <div class="col-lg-8">
+                <div class="row g-4">
+                  <div class="col-md-6">
+                    <div class="ratio ratio-16x9 video-frame">
+                      <iframe src="https://www.youtube-nocookie.com/embed/yvp74DBEI4M" title="Shallow – Lady Gaga, Bradley Cooper (harp cover)" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <p class="mt-2 mb-0 small">Shallow – Lady Gaga, Bradley Cooper</p>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="ratio ratio-16x9 video-frame">
+                      <iframe src="https://www.youtube-nocookie.com/embed/tl8LUJA0MZ8" title="Gott ist im Regen – Schwarzer Engel (harp cover)" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <p class="mt-2 mb-0 small">Gott ist im Regen – Schwarzer Engel</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane fade" id="pane-guitar" role="tabpanel" aria-labelledby="tab-guitar" tabindex="0">
+            <div class="row g-4 g-lg-5 align-items-center">
+              <div class="col-lg-6">
+                <h2 class="mb-3" data-i18n="music.guitarTitle">Kytara jako samouk</h2>
+                <p class="text-secondary" data-i18n="music.guitarText">Na kytaru jsem se naučil sám. Kratší nahrávky s kytarou průběžně přidávám na Instagram.</p>
+                <!-- Kapela: odkomentovat, až bude možné ji zmínit
+                <p class="text-secondary" data-i18n="music.band">Na kytaru hraju také v kapele.</p>
+                -->
+                <a class="btn btn-outline-primary" href="https://www.instagram.com/samuel_zarsky/" target="_blank" rel="noopener"><i class="bi bi-instagram" aria-hidden="true"></i><span data-i18n="common.moreOnIg">Více na Instagramu</span></a>
+              </div>
+              <div class="col-lg-6">
+                <div class="embed-placeholder">
+                  <i class="bi bi-instagram fs-2 d-block mb-2" aria-hidden="true"></i>
+                  <span class="todo">[DOPLNIT: Instagram post / reel s kytarou]</span>
+                </div>
+                <!--
+                  Instagram embed (post nebo reel; highlights a stories vložit nejdou):
+                  1. Na instagram.com otevřete post → tři tečky (…) → „Vložit“ (Embed) → „Kopírovat kód pro vložení“.
+                  2. Smažte <div class="embed-placeholder">…</div> výše a vložte kód sem.
+                  3. Kód obsahuje <script async src="//www.instagram.com/embed.js"></script>; stačí jen jednou na stránce.
+                -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DataTable: repertoár -->
+    <section class="section border-top" aria-labelledby="repTitle">
+      <div class="container">
+        <div class="mb-4" data-reveal>
+          <h2 id="repTitle" class="mb-2" data-i18n="music.repTitle">Repertoár</h2>
+          <p class="text-secondary mb-0" data-i18n="music.repText">Skladby, které hraju, učím se nebo jsem hrál dřív.</p>
+        </div>
+        <div class="card-surface table-wrap">
+          <table id="repTable" class="table table-striped table-hover align-middle w-100"></table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4 align-items-center text-center text-md-start">
+        <div class="col-md-6 col-lg-4">
+          <a class="logo" href="index.html">Samuel Žárský<span class="accent">.</span></a>
+          <p class="text-secondary small mb-0 mt-1">&copy; 2026 Samuel Žárský · <span data-i18n="footer.note">Vývojář, hudebník, fotograf</span></p>
+        </div>
+        <nav class="col-lg-4 d-none d-lg-block" aria-label="Mapa webu" data-i18n-attr="aria-label:footer.sitemap">
+          <ul class="footer-sitemap list-unstyled mb-0">
+            <li><a href="index.html" data-i18n="nav.home">Domů</a></li>
+            <li><a href="o-mne.html" data-i18n="nav.about">O mně</a></li>
+            <li><a href="projekty.html" data-i18n="nav.projects">Projekty</a></li>
+            <li><a href="fotografie.html" data-i18n="nav.photo">Fotografie</a></li>
+            <li><a href="hudba.html" data-i18n="nav.music">Hudba</a></li>
+            <li><a href="kontakt.html" data-i18n="nav.contact">Kontakt</a></li>
+          </ul>
+        </nav>
+        <div class="col-md-6 col-lg-4 d-flex justify-content-center justify-content-md-end">
+          <ul class="social-links list-unstyled mb-0">
+                <li><a class="btn-icon" href="https://github.com/StringSlayyer" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github" aria-hidden="true"></i></a></li>
+                <li><a class="btn-icon" href="https://www.youtube.com/@samuelzarsky666" target="_blank" rel="noopener" aria-label="YouTube"><i class="bi bi-youtube" aria-hidden="true"></i></a></li>
+                <li><a class="btn-icon" href="https://www.instagram.com/samuel_zarsky/" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a></li>
+                <li><a class="btn-icon" href="mailto:sam@viademy.com" aria-label="E-mail"><i class="bi bi-envelope" aria-hidden="true"></i></a></li>
+              </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.datatables.net/2.1.8/js/dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/2.1.8/js/dataTables.bootstrap5.min.js"></script>
+  <script src="https://cdn.datatables.net/responsive/3.0.3/js/dataTables.responsive.min.js"></script>
+  <script src="https://cdn.datatables.net/responsive/3.0.3/js/responsive.bootstrap5.min.js"></script>
+  <script src="assets/js/data-repertoar.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

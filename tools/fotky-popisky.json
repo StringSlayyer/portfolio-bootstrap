@@ -1,0 +1,45 @@
+{
+ "_kategorie": {
+  "noc": {"cs": "Noc", "en": "Night"},
+  "priroda": {"cs": "Příroda", "en": "Nature"},
+  "mesto": {"cs": "Město", "en": "City"},
+  "zvirata": {"cs": "Zvířata", "en": "Animals"},
+  "zatisi": {"cs": "Zátiší", "en": "Still life"},
+  "motorky": {"cs": "Motorky", "en": "Motorbikes"}
+ },
+
+ "galerie/mesto/IMG_2050.jpg": {"title": {"cs": "Střechy starého města", "en": "Old town rooftops"}, "featured": true},
+ "galerie/mesto/IMG_2051.jpg": {"title": {"cs": "Věž nad střechami", "en": "Spire above the rooftops"}},
+ "galerie/mesto/IMG_2054.jpg": {"title": {"cs": "Gotická věž z dálky", "en": "Gothic spire from afar"}},
+ "galerie/mesto/IMG_2061.jpg": {"title": {"cs": "Průčelí katedrály", "en": "Cathedral facade"}},
+ "galerie/mesto/IMG_2064.jpg": {"title": {"cs": "Kamenní světci", "en": "Stone saints"}, "featured": true},
+ "galerie/mesto/IMG_2355.jpg": {"title": {"cs": "Hodiny na věži", "en": "Tower clocks"}},
+ "galerie/mesto/IMG_2380.jpg": {"title": {"cs": "Gotické okno", "en": "Gothic window"}, "featured": true},
+
+ "galerie/noc/IMG_1489-Edit.png": {"title": {"cs": "Mléčná dráha nad lesem", "en": "Milky Way above the forest"}, "featured": true},
+ "galerie/noc/IMG_1589.jpg": {"title": {"cs": "Hvězdné nebe", "en": "Starry sky"}},
+ "galerie/noc/IMG_1972_ps1.jpg": {"title": {"cs": "Star trails nad stromy", "en": "Star trails above the trees"}, "featured": true},
+ "galerie/noc/IMG_6451.jpg": {"title": {"cs": "Orion nad krajinou", "en": "Orion above the landscape"}},
+ "galerie/noc/IMG_6453.jpg": {"title": {"cs": "Zimní noc nad obzorem", "en": "Winter night above the horizon"}},
+ "galerie/noc/IMG_7862_ps.jpg": {"title": {"cs": "Mléčná dráha", "en": "Milky Way"}, "featured": true},
+ "galerie/noc/IMG_9283.jpg": {"title": {"cs": "Západ slunce v trávě", "en": "Sunset through the grass"}, "featured": true},
+
+ "galerie/priroda/IMG_0112.JPG": {"title": {"cs": "Fialový květ", "en": "Purple bloom"}, "featured": true},
+ "galerie/priroda/IMG_0492.jpg": {"title": {"cs": "Šišky", "en": "Pine cones"}},
+ "galerie/priroda/IMG_0529.jpg": {"title": {"cs": "Hřib v mechu", "en": "Mushroom in the moss"}, "featured": true},
+ "galerie/priroda/IMG_20220124_142221.jpg": {"title": {"cs": "Strom na zasněženém poli", "en": "Tree in a snowy field"}},
+ "galerie/priroda/IMG_2069.jpg": {"title": {"cs": "Vodopád", "en": "Waterfall"}},
+ "galerie/priroda/IMG_2187.jpg": {"title": {"cs": "Skalní stěna", "en": "Rock face"}},
+ "galerie/priroda/IMG_2189.jpg": {"title": {"cs": "Vápencová skála", "en": "Limestone cliff"}},
+ "galerie/priroda/IMG_2250.jpg": {"title": {"cs": "Vinice", "en": "Vineyard"}},
+ "galerie/priroda/IMG_5337.JPG": {"title": {"cs": "Suché listí", "en": "Dry leaves"}},
+ "galerie/priroda/rybiz_slunce.JPG": {"title": {"cs": "Rybíz v protisvětle", "en": "Currants against the sun"}, "featured": true},
+ "galerie/priroda/voda_dlouha_zaverka.jpg": {"title": {"cs": "Lesní potok, dlouhá závěrka", "en": "Forest stream, long exposure"}, "featured": true},
+ "galerie/priroda/voda_kratka_zaverka2.jpg": {"title": {"cs": "Jez, krátká závěrka", "en": "Weir, fast shutter"}},
+
+ "galerie/zatisi/IMG_5162.JPG": {"title": {"cs": "Citrony v misce", "en": "Lemons in a bowl"}},
+ "galerie/zatisi/IMG_5179.JPG": {"title": {"cs": "Citron na modré látce", "en": "Lemon on blue fabric"}, "featured": true},
+
+ "galerie/zvirata/b-IMG_7219.jpg": {"title": {"cs": "Štěně v trávě", "en": "Puppy in the grass"}},
+ "galerie/zvirata/miky_plysak.JPG": {"title": {"cs": "Miky s plyšákem", "en": "Miky with a plush toy"}, "featured": true}
+}

@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "portfolio-odevzdani.zip"
 
 EXCLUDE_DIRS = {".git", ".claude", "_originals", "__pycache__", ".vs", ".vscode"}
-EXCLUDE_FILES = {"CLAUDE.md", "POZNAMKY-PREZENTACE.md", OUT.name}
+EXCLUDE_FILES = {"CLAUDE.md", "POZNAMKY-PREZENTACE.md", "NAVOD.md", OUT.name}
 
 count = 0
 with zipfile.ZipFile(OUT, "w", zipfile.ZIP_DEFLATED) as zf:

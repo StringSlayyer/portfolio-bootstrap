@@ -5,21 +5,21 @@ const PROJEKTY = {
     links: [{ url: "https://viademy.com", icon: "bi-box-arrow-up-right", label: "viademy.com" }],
     cs: {
       title: "Viademy",
-      meta: "VR Engineer · startup · 2026 – dosud",
+      meta: "Co-founder & VR Engineer · startup · 2026 – dosud",
       short: "Výuka dějepisu ve virtuální realitě pro základní školy. Vyvíjím VR aplikaci v Unity pro Meta Quest 3 a 3S.",
       detail: [
         "Viademy je startup, který vyvíjí edukativní VR platformu pro základní školy. Žáci v týmech procházejí historické světy ve virtuální realitě. Jeden člen týmu je v headsetu a ostatní mu pomáhají s pracovními listy a tabletem. Učitel řídí hodinu z prohlížeče. První hotová lekce zavede třídu do starověkého Egypta.",
-        "Jako VR Engineer mám na starosti vývoj samotné VR aplikace v Unity. Cílíme primárně na headsety Meta Quest 3 a 3S.",
+        "Jako spoluzakladatel a VR Engineer mám na starosti vývoj samotné VR aplikace v Unity. Cílíme primárně na headsety Meta Quest 3 a 3S.",
         "Jsme čtyřčlenný tým: CEO, kolega, který má na starosti komunikaci se školami a webovou platformu, grafik a já na VR aplikaci."
       ]
     },
     en: {
       title: "Viademy",
-      meta: "VR Engineer · startup · 2026 – present",
+      meta: "Co-founder & VR Engineer · startup · 2026 – present",
       short: "History lessons in virtual reality for primary schools. I build the VR app in Unity for Meta Quest 3 and 3S.",
       detail: [
         "Viademy is a startup building an educational VR platform for primary schools. Students explore historical worlds in teams: one of them wears the headset while the others help with worksheets and a tablet, and the teacher runs the lesson from a browser. The first finished lesson takes the class to Ancient Egypt.",
-        "As a VR Engineer I am responsible for developing the VR application itself in Unity. Our primary targets are the Meta Quest 3 and 3S headsets.",
+        "As co-founder and VR Engineer I am responsible for developing the VR application itself in Unity. Our primary targets are the Meta Quest 3 and 3S headsets.",
         "We are a team of four: the CEO, a colleague handling communication with schools and the web platform, a graphic designer, and me on the VR app."
       ]
     }
@@ -160,23 +160,23 @@ const PROJEKTY = {
     tech: [".NET 8", "ASP.NET Core", "REST API", "Clean Architecture", "xUnit", "Sentry", "Azure Blob Storage", "Docker Compose", "Ubuntu"],
     links: [],
     cs: {
-      title: "ClubIQ",
+      title: "Clubiq",
       meta: "Maturitní projekt · Backend .NET Developer & Server Admin · 10/2024 – 6/2025",
-      short: "Platforma pro zpětnou vazbu mezi trenéry a hráči hokejového klubu HC Robe Vsetín. Navrhl jsem REST API a aplikaci nasadil na server.",
+      short: "Aplikace pro sledování progresu sportovců pro hokejový klub HC Robe Vsetín. Navrhl jsem REST API v .NET 8 a aplikaci nasadil na server.",
       detail: [
-        "Maturitní projekt tříčlenného týmu podle požadavků hokejového klubu HC Robe Vsetín. Platforma digitalizovala zpětnou vazbu mezi trenéry a hráči: vzájemné hodnocení, sdílení výukových materiálů a dlouhodobé statistiky v grafech.",
+        "Maturitní projekt tříčlenného týmu: aplikace pro sledování progresu sportovců, kterou jsme stavěli podle požadavků hokejového klubu HC Robe Vsetín. Trenéři a hráči se v ní mohli vzájemně hodnotit, sdílet výukové materiály a sledovat dlouhodobé statistiky v grafech.",
         "Navrhl a implementoval jsem REST API v .NET 8 podle principů Clean Architecture. Kvůli stabilitě a bezpečnosti jsem přidal rate limiting a vlastní middleware s action filtery pro pokročilou autorizaci. Chyby monitoroval Sentry a spolehlivost business logiky ověřovaly integrační testy v xUnit.",
-        "Média se ukládala do Azure Blob Storage. Celou aplikaci jsem kontejnerizoval v Docker Compose a nasadil na produkční Ubuntu server."
+        "Média se ukládala do Azure Blob Storage. Celou aplikaci jsem kontejnerizoval v Docker Compose a nasadil na Ubuntu server, kde ji tým klubu testoval."
       ]
     },
     en: {
-      title: "ClubIQ",
+      title: "Clubiq",
       meta: "High school final project · Backend .NET Developer & Server Admin · 10/2024 – 6/2025",
-      short: "A feedback platform for coaches and players of the HC Robe Vsetín hockey club. I designed the REST API and deployed the app to a server.",
+      short: "An athlete progress tracking app for the HC Robe Vsetín hockey club. I designed the REST API in .NET 8 and deployed the app to a server.",
       detail: [
-        "A three-person final high school project built to the requirements of the HC Robe Vsetín hockey club. The platform digitised feedback between coaches and players: mutual ratings, shared training materials and long-term statistics in charts.",
+        "A three-person final high school project: an athlete progress tracking app built to the requirements of the HC Robe Vsetín hockey club. Coaches and players could rate each other, share training materials and follow long-term statistics in charts.",
         "I designed and implemented the REST API in .NET 8 following Clean Architecture. For stability and security I added rate limiting and custom middleware with action filters for advanced authorisation. Errors were monitored with Sentry, and integration tests in xUnit verified the business logic.",
-        "Media were stored in Azure Blob Storage. I containerised the whole application with Docker Compose and deployed it to a production Ubuntu server."
+        "Media were stored in Azure Blob Storage. I containerised the whole application with Docker Compose and deployed it to an Ubuntu server, where the club's team tested it."
       ]
     }
   },

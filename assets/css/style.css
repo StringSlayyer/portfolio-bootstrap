@@ -841,3 +841,7 @@ table.dataTable tbody tr.row-clickable { cursor: pointer; }
   .card-hover:hover, .bento-card:hover .bento-bg, .photo-tile:hover img { transform: none; }
 }
 
+
+/* Seznam faktů v kartě (taby Hudba) */
+.card-surface > .project-list.mt-0 li:first-child { border-top: 0; padding-top: 0; }
+.card-surface > .project-list.mt-0 li:last-child { padding-bottom: 0; }
